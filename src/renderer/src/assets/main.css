@@ -1,0 +1,215 @@
+html,
+body,
+:root {
+  --base-background-color: #D3D3D3;
+  --sidebar-button-background: #F0F0F0;
+  --sidebar-button-background-hover: #E0E0E0;
+  --scrollbar-thmub-color: #c0c0c0;
+  --scrollbar-thmub-color-hover: #a9a9a9;
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./Inter.ttf') format('truetype');
+}
+
+.AppLayout {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.note-content-title-input {
+  width: 100%;
+  height: 100%;
+  margin-inline: 50px;
+  border: none;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: 'Inter';
+  letter-spacing: 0.7px;
+}
+
+.note-content-title-input:focus {
+  outline: none;
+}
+
+.whale-note-folder {
+  /* padding-left: 10px; */
+  margin-left: 10px;
+  text-overflow: ellipsis;
+  transition: background-color 0.15s ease;
+}
+
+/* .whale-note-folder:hover {
+  border-radius: 8px;
+  background-color: var(--sidebar-button-background-hover);
+} */
+
+.whale-note-folder-header {
+  height: 34px;
+  flex-grow: 1;
+  transition: padding 0.15s ease;
+}
+
+.whale-note-folder-header:hover {
+  padding-left: 7px;
+  border-radius: 8px;
+  background-color: var(--sidebar-button-background-hover);
+}
+
+.whale-note-file {
+  height: 36px;
+  transition: padding 0.15s ease, background-color 0.15s ease;
+}
+
+.whale-note-file.selected {
+  background-color: var(--sidebar-button-background-hover);
+}
+
+.whale-note-file:hover {
+  padding-left: 2px;
+  background-color: var(--sidebar-button-background-hover);
+}
+
+.sidebar {
+  padding-inline: 10px;
+  width: 20%;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--base-background-color);
+  position: relative;
+  user-select: none;
+}
+
+.contextMenuItem {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 5px 5px;
+  height: 30px;
+  border-radius: 10px;
+}
+
+.contextMenuItem:hover {
+  background-color: var(--sidebar-button-background);
+}
+
+.contextMenuItem.danger {
+  color: red;
+}
+
+.sidebar.minimized {
+  background-color: transparent;
+  position: absolute;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thmub-color);
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-thmub-color-hover);
+}
+
+.toolBarBtnsContainer {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.toolBarLeftContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.toolBarRightContaier {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.toolBarBtn {
+  height: 37px;
+  width: 37px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--sidebar-button-background);
+  border: none;
+  transition: background-color 0.15s ease;
+}
+
+.toolBarBtn:hover {
+  background: var(--sidebar-button-background-hover);
+}
+
+.sidebarBtn {
+  border: none;
+  background: var(--sidebar-button-background);
+  height: 37px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-family: Roboto, sans-serif;
+  border-radius: 10px;
+  font-size: 15px;
+  transition: background 0.15s ease;
+}
+
+
+.sidebarBtn:hover {
+  background: var(--sidebar-button-background-hover);
+}
+
+.btn-text {
+  margin-top: 3.5px;
+  letter-spacing: 0.7px;
+  color: black;
+  font-size: 16px;
+}
+
+.resizer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5px;
+  height: 100vh;
+  cursor: col-resize;
+}
+
+.resizer:hover {
+  background-color: #a3c2c2;
+}
+
+.whale-note-folder-arrow {
+  transition: transform 0.15s ease;
+}
+
+.whale-note-folder-arrow.opened {
+  transform: rotate(90deg);
+}
+
+.btn-icon {
+  margin: 0px 10px;
+}
