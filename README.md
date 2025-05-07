@@ -1,6 +1,6 @@
 # Whales
 
-A Note Taking Application built using Electron JS with React and TypeScript.
+A Note Taking Application built using Electron JS with React and TypeScript. (Not Completed)
 
 ## Project Setup
 
